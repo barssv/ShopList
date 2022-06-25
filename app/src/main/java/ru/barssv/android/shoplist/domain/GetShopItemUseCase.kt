@@ -1,10 +1,14 @@
 package ru.barssv.android.shoplist.domain
 
-class GetShopItemUseCase {
+
+// получает элемент по его Id
+
+class GetShopItemUseCase (private val shopListRepository: ShopListRepository){
 
     fun getShopItem(shopItemId: Int): ShopItem{
+        return shopListRepository.getShopItem(shopItemId)
 
-        TODO()
+
         // принимает shopItemId и возвращает ShopItem
     }
 

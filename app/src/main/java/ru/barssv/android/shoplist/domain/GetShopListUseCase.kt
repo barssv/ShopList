@@ -1,13 +1,14 @@
 package ru.barssv.android.shoplist.domain
 
 
-// получает весь список покупок
+// получает весь список элементов
 
 
-class GetShopListUseCase {
+class GetShopListUseCase (private val shopListRepository: ShopListRepository){
 
     fun getShopList():List <ShopItem>{
-        TODO()
+        return shopListRepository.getShopList()
+
         //не принимает параметров и возвращает List наших элементов
     }
 }
